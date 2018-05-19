@@ -1,0 +1,179 @@
+$Extra-large: "only screen and (max-width : 1200px)";
+$Large: "only screen and (max-width : 992px)";
+$Medium: "only screen and (max-width : 768px)";
+$Small: "only screen and (max-width : 650px)";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "PingFang TC", "Heiti TC", "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  margin: 0;
+  height: 100%;
+  line-height: 1.5;
+  background-color: #fbf8f5;
+}
+
+body {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  flex: 0 0 1170px;
+  background-color: #FFFFFF;
+  padding: 1.5em;
+  @media #{$Extra-large} {
+    flex: 0 0 980px;
+  }
+  @media #{$Large} {
+    flex: 0 0 730px;
+  }
+  @media #{$Medium} {
+    flex: 0 0 650px;
+  }
+  @media #{$Small} {
+    flex: 1;
+  }
+}
+
+.left-column {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  @media #{$Large} {
+    flex: 0 0 100%;
+    margin-bottom: 2em;
+  }
+  & .left-grid-column {
+    flex: 1;
+    & h1 {
+      position: relative;
+      display: inline-block;
+      padding: 0 0.4em;
+      margin-bottom: 0.7em;
+      border-bottom: solid 2px #00c141;
+    }
+    & h2 {
+      font-size: 1.1em;
+      display: inline-block;
+      margin-bottom: 1.8em;
+      padding: 0 0.5em;
+      position: relative;
+    }
+    & h2:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0.8em;
+      top: 0.8em;
+      left: 0;
+      background-color: rgba(255, 255, 0, 0.35);
+    }
+    & .export-button {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0.5em 3.5em;
+      background-color: #00c141;
+      color: #FFFFFF;
+      transition: 0.3s;
+      &:hover {
+        background-color: #008f30;
+      }
+    }
+  }
+}
+
+.right-column {
+  flex: 0 0 600px;
+  @media #{$Large} {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+  @media #{$Small} {
+    flex: 0 0 100%;
+    overflow: auto;
+    justify-content: flex-start;
+  }
+  & .right-grid-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media #{$Large} {
+      flex: 0 0 600px;
+    }
+    & .col {
+      cursor: pointer;
+      height: 200px;
+      display: flex;
+      flex: 0 0 200px;
+      align-items: center;
+      text-align: center;
+      color: #FFFFFF;
+      background: #d3d3d3;
+      background-clip: content-box;
+      padding: 5px;
+      justify-content: center;
+      font-size: 2em;
+      overflow: hidden;
+      &.col-hover {
+        border: 3px dashed #7e7e7e;
+      }
+      &.have-picture {
+        background: transparent;
+        padding: 0;
+        border: 0;
+      }
+    }
+    & .upload-file {
+      display: none;
+    }
+  }
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0)
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg)
+  }
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+}
