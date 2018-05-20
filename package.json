@@ -1,7 +1,7 @@
 {
-  "name": "9-grid-picture",
+  "name": "3x3-photo-grid",
   "version": "1.0.0",
-  "description": "Create your 3x3 Grid Photo",
+  "description": "Create your 3x3 Photo Grid",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
