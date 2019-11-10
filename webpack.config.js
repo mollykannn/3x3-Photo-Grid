@@ -1,10 +1,12 @@
 const path = require('path'),
   webpack = require('webpack'),
   ExtractTextPlugin = require("extract-text-webpack-plugin"),
-  CleanWebpackPlugin = require('clean-webpack-plugin'),
+  {
+    CleanWebpackPlugin
+  } = require('clean-webpack-plugin'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   glob = require('glob'),
-  PurifyCSSPlugin = require('purifycss-webpack'),
+  PurgecssPlugin = require('purgecss-webpack-plugin')
   WebpackParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 
 module.exports = {
@@ -23,9 +25,6 @@ module.exports = {
           fallback: "style-loader",
           use: [{
             loader: 'css-loader',
-            options: {
-              minimize: true
-            }
           }, 'postcss-loader']
         })
       },
@@ -35,9 +34,6 @@ module.exports = {
           fallback: "style-loader",
           use: [{
             loader: 'css-loader',
-            options: {
-              minimize: true
-            }
           }, 'postcss-loader', 'sass-loader']
         })
       },
@@ -74,13 +70,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([path.join(__dirname, 'dist')]),
-    new CopyWebpackPlugin([{
-      from: "src/static",
-      to: "static",
-    }]),
-    new PurifyCSSPlugin({
-      paths: glob.sync(path.join(__dirname, 'src/html/*.*'))
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['dist']
+    }),
+    // new CopyWebpackPlugin([{
+    //   from: "src/static",
+    //   to: "static",
+    // }]),
+    new PurgecssPlugin({
+      paths: glob.sync(`src/**/*`,  { nodir: true })
     }),
     new ExtractTextPlugin("css/[name].css"),
     new WebpackParallelUglifyPlugin({
@@ -90,7 +88,6 @@ module.exports = {
           comments: false
         },
         compress: {
-          warnings: false,
           drop_console: true,
           collapse_vars: true,
           reduce_vars: true
