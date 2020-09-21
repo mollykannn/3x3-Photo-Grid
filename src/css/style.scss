@@ -38,7 +38,7 @@ body {
   flex-wrap: wrap;
   margin: auto;
   flex: 0 0 1170px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 1.5em;
   @media #{$Extra-large} {
     flex: 0 0 980px;
@@ -78,22 +78,17 @@ body {
       margin-bottom: 1.8em;
       padding: 0 0.5em;
       position: relative;
-    }
-    & h2:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 0.8em;
-      top: 0.8em;
-      left: 0;
-      background-color: rgba(255, 255, 0, 0.35);
+      background: linear-gradient(rgba(255, 255, 0, 0.5), rgba(255, 255, 0, 0.5));
+      background-size: auto 0.6em;
+      background-position: bottom;
+      background-repeat: no-repeat;
     }
     & .export-button {
       cursor: pointer;
       display: inline-block;
       padding: 0.5em 3.5em;
       background-color: #00c141;
-      color: #FFFFFF;
+      color: #ffffff;
       transition: 0.3s;
       &:hover {
         background-color: #008f30;
@@ -128,7 +123,7 @@ body {
       flex: 0 0 200px;
       align-items: center;
       text-align: center;
-      color: #FFFFFF;
+      color: #ffffff;
       background: #d3d3d3;
       background-clip: content-box;
       padding: 5px;
@@ -151,29 +146,29 @@ body {
 }
 
 .github-corner:hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out
+  animation: octocat-wave 560ms ease-in-out;
 }
 
 @keyframes octocat-wave {
   0%,
   100% {
-    transform: rotate(0)
+    transform: rotate(0);
   }
   20%,
   60% {
-    transform: rotate(-25deg)
+    transform: rotate(-25deg);
   }
   40%,
   80% {
-    transform: rotate(10deg)
+    transform: rotate(10deg);
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .github-corner:hover .octo-arm {
-    animation: none
+    animation: none;
   }
   .github-corner .octo-arm {
-    animation: octocat-wave 560ms ease-in-out
+    animation: octocat-wave 560ms ease-in-out;
   }
 }

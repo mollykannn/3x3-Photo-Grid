@@ -3,33 +3,33 @@
   "version": "1.0.0",
   "description": "Create your 3x3 Photo Grid",
   "main": "index.js",
-  "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --open --mode development"
-  },
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "build": "webpack --config ./build/webpack.prod.js",
+    "dev": "webpack-dev-server --config ./build/webpack.dev.js"
+  },
   "devDependencies": {
-    "autoprefixer": "^9.7.1",
+    "@babel/core": "^7.11.6",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^5.0.5",
-    "css-loader": "^3.2.0",
-    "cssnano": "^4.1.10",
-    "extract-loader": "^3.1.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^4.2.0",
-    "html-loader": "^0.5.5",
-    "html2canvas": "^1.0.0-rc.5",
-    "node-sass": "^4.13.1",
-    "postcss-load-config": "^2.1.0",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "image-webpack-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "purgecss-webpack-plugin": "^1.6.0",
-    "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0",
-    "url-loader": "^2.2.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0",
-    "webpack-parallel-uglify-plugin": "^1.1.2"
+    "sass-loader": "^8.0.2",
+    "url-loader": "^2.3.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
+  },
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.7"
   }
 }

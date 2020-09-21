@@ -3,7 +3,7 @@
 Create your 3x3 Photo Grid.
 
 [https://mollykannn.github.io/3x3-Photo-Grid](https://mollykannn.github.io/3x3-Photo-Grid)
-![Screenshot](https://mollykannn.github.io/3x3-Photo-Grid/images/5f6e0661c9dcf129eac64e1a6198ccc1.png)
+![Screenshot](https://mollykannn.github.io/3x3-Photo-Grid/images/screenshot.png)
 
 
 ## 安裝 (Install)
