@@ -1,5 +1,4 @@
-import "../css/style.scss";
-import "../images/screenshot.png";
+import "/src/css/style.scss";
 import html2canvas from "html2canvas";
 
 function readFileAndProcess(readfile, number) {
