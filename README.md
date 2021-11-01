@@ -9,17 +9,17 @@ Create your 3x3 Photo Grid.
 ## 安裝 (Install)
 
 ```shell
-pnpm install
+yarn install
 ```
 
 ## 使用方法 (Usage)
 
 建立檔案 (Create files)
 ```shell
-pnpm run build
+yarn run build
 ```
 
 運行 (Run)
 ```shell
-pnpm run dev
+yarn run dev
 ```
