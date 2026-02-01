@@ -14,7 +14,7 @@
     "@amatlash/vite-plugin-stylelint": "^1.2.0",
     "sass": "^1.97.3",
     "stylelint": "^16.26.1",
-    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-property-sort-order-smacss": "^11.1.0",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-order": "^7.0.1",
     "stylelint-scss": "^7.0.0",
